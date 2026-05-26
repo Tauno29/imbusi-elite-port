@@ -16,7 +16,7 @@ export function Loader() {
         <div className="absolute inset-0 border border-primary animate-scan overflow-hidden" />
       </div>
       <p className="absolute bottom-1/3 font-display tracking-[0.4em] text-xs text-primary text-glow">
-        IMBUSI FX
+        IMBUZI FX
       </p>
     </div>
   );

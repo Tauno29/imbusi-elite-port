@@ -73,13 +73,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Imbusi Forex Trading — David Kangwe Sheehama" },
-      { name: "description", content: "Elite forex trader and mentor. The official portfolio of David Kangwe Sheehama — Imbusi Forex Trading." },
+      { title: "Imbuzi Forex Trading — David Kangwe Sheehama" },
+      { name: "description", content: "Elite forex trader and mentor. The official portfolio of David Kangwe Sheehama — Imbuzi Forex Trading." },
       { name: "author", content: "David Kangwe Sheehama" },
-      { property: "og:title", content: "Imbusi Forex Trading" },
+      { property: "og:title", content: "Imbuzi Forex Trading" },
       { property: "og:description", content: "Elite forex trader & mentor — David Kangwe Sheehama" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Imbusi FX" },
+      { property: "og:site_name", content: "Imbuzi FX" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

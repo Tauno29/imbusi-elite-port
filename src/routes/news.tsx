@@ -10,7 +10,7 @@ import { formatDistanceToNow } from "date-fns";
 export const Route = createFileRoute("/news")({
   head: () => ({
     meta: [
-      { title: "News & Updates — Imbusi Forex Trading" },
+      { title: "News & Updates — Imbuzi Forex Trading" },
       { name: "description", content: "Latest trading updates, wins, and market analysis from David Kangwe Sheehama." },
     ],
   }),
@@ -91,7 +91,7 @@ function News() {
           </div>
         ) : !posts?.length ? (
           <div className="glass clip-corner p-12 text-center text-muted-foreground">
-            No updates yet. Check back soon — Imbusi is preparing fresh content.
+            No updates yet. Check back soon — Imbuzi is preparing fresh content.
           </div>
         ) : (
           <div className="space-y-6">
@@ -106,7 +106,7 @@ function News() {
                   <div className="flex items-center gap-3 px-5 py-4 border-b border-primary/10">
                     <div className="h-9 w-9 gradient-green clip-corner grid place-items-center text-xs font-bold text-primary-foreground">I</div>
                     <div className="flex-1">
-                      <div className="text-sm font-semibold">Imbusi FX</div>
+                      <div className="text-sm font-semibold">Imbuzi FX</div>
                       <div className="text-xs text-muted-foreground">
                         {formatDistanceToNow(new Date(p.created_at), { addSuffix: true })}
                       </div>

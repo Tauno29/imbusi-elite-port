@@ -7,8 +7,8 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Imbusi Forex Trading" },
-      { name: "description", content: "Trading setups, charts, branding, and success moments from Imbusi Forex Trading." },
+      { title: "Gallery — Imbuzi Forex Trading" },
+      { name: "description", content: "Trading setups, charts, branding, and success moments from Imbuzi Forex Trading." },
     ],
   }),
   component: Gallery,

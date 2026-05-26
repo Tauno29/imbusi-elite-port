@@ -13,7 +13,7 @@ import { toast } from "sonner";
 import { Navbar } from "@/components/site/Navbar";
 
 export const Route = createFileRoute("/admin")({
-  head: () => ({ meta: [{ title: "Admin Dashboard — Imbusi FX" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "Admin Dashboard — Imbuzi FX" }, { name: "robots", content: "noindex" }] }),
   component: AdminPage,
 });
 
@@ -50,7 +50,7 @@ function AdminPage() {
             </div>
             <div>
               <h1 className="font-display text-2xl font-bold">Admin Dashboard</h1>
-              <p className="text-xs text-muted-foreground">Imbusi Forex Trading Control Center</p>
+              <p className="text-xs text-muted-foreground">Imbuzi Forex Trading Control Center</p>
             </div>
           </div>
           <Button

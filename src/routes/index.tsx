@@ -13,9 +13,9 @@ import g4 from "@/assets/gallery-4.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Imbusi Forex Trading — David Kangwe Sheehama" },
+      { title: "Imbuzi Forex Trading — David Kangwe Sheehama" },
       { name: "description", content: "Elite forex trader and mentor. Follow David Kangwe Sheehama's trading journey, market analysis and mentorship." },
-      { property: "og:title", content: "Imbusi Forex Trading" },
+      { property: "og:title", content: "Imbuzi Forex Trading" },
       { property: "og:description", content: "Elite forex trader and mentor — David Kangwe Sheehama" },
     ],
   }),
@@ -67,7 +67,7 @@ function Home() {
           </div>
 
           <h1 className="mt-8 font-display text-5xl sm:text-7xl font-bold tracking-tight animate-float-up" style={{ animationDelay: "0.2s" }}>
-            IMBUSI <span className="text-primary text-glow">FOREX</span> TRADING
+            IMBUZI <span className="text-primary text-glow">FOREX</span> TRADING
           </h1>
           <p className="mt-3 text-base sm:text-lg text-muted-foreground font-mono animate-float-up" style={{ animationDelay: "0.3s" }}>
             David Kangwe Sheehama
@@ -116,7 +116,7 @@ function Home() {
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-primary mb-4">About</p>
             <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
-              The mind behind <span className="text-primary text-glow">Imbusi FX</span>
+              The mind behind <span className="text-primary text-glow">Imbuzi FX</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">{aboutText}</p>
 
