@@ -1,18 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Shield } from "lucide-react";
-import { AdminModal } from "./AdminModal";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/news", label: "News & Updates" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const [adminOpen, setAdminOpen] = useState(false);
+  // admin modal removed for portfolio-style site
 
   return (
     <>
@@ -39,13 +35,7 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <button
-              onClick={() => setAdminOpen(true)}
-              aria-label="Admin"
-              className="ml-3 h-6 w-6 rounded-sm bg-primary/80 hover:bg-primary box-glow-sm transition hover:scale-110 grid place-items-center"
-            >
-              <Shield className="h-3 w-3 text-primary-foreground" />
-            </button>
+            {/* admin access removed from navbar for portfolio mode */}
           </nav>
 
           <button
@@ -71,20 +61,12 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <button
-              onClick={() => {
-                setOpen(false);
-                setAdminOpen(true);
-              }}
-              className="mt-2 flex items-center gap-2 px-3 py-2 text-sm text-primary border border-primary/30 rounded-sm"
-            >
-              <Shield className="h-4 w-4" /> Admin
-            </button>
+            {/* admin access removed from mobile menu for portfolio mode */}
           </div>
         )}
       </header>
 
-      <AdminModal open={adminOpen} onOpenChange={setAdminOpen} />
+      {/* AdminModal removed */}
     </>
   );
 }

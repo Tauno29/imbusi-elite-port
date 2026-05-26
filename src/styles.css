@@ -107,6 +107,12 @@
   .clip-corner {
     clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
   }
+  .boxy {
+    border-radius: 8px;
+    border: 1px solid oklch(0.82 0.27 145 / 0.12);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding: 0.5rem;
+  }
 }
 
 @keyframes ticker {

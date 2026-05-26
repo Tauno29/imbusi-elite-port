@@ -3,14 +3,16 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { Loader } from "./Loader";
 import { MarketTicker } from "./MarketTicker";
+import { CandlestickBg } from "./CandlestickBg";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
       <Loader />
       <Navbar />
       <MarketTicker />
-      <main className="flex-1">{children}</main>
+      <CandlestickBg />
+      <main className="flex-1 relative z-10">{children}</main>
       <Footer />
       <a
         href="https://wa.me/264000000000"

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowRight, MessageSquare, TrendingUp, Target, Award, BookOpen } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
@@ -47,6 +47,8 @@ function Home() {
     content?.about_image_4 || g4,
   ];
 
+  
+
   return (
     <SiteLayout>
       {/* HERO */}
@@ -55,7 +57,7 @@ function Home() {
         <img src={heroBg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-linear-to-b from-background/60 via-background/80 to-background" />
 
-        <div className="relative mx-auto max-w-6xl px-6 py-16 sm:py-24 text-center">
+        <div className="relative mx-auto max-w-6xl px-6 py-16 sm:py-24 text-center boxy">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 border border-primary/30 clip-corner glass text-xs uppercase tracking-[0.25em] text-primary animate-float-up">
             <span className="h-1.5 w-1.5 bg-primary rounded-full animate-pulse" />
             Live · Elite Forex Mentor
@@ -85,19 +87,51 @@ function Home() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-float-up" style={{ animationDelay: "0.5s" }}>
-            <Link
-              to="/news"
-              className="group inline-flex items-center gap-2 gradient-green text-primary-foreground font-semibold px-6 py-3 clip-corner box-glow hover:scale-105 transition"
-            >
-              View Updates <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
-            </Link>
-            <Link
-              to="/contact"
+            {/* Gallery removed — portfolio-focused site */}
+            <a
+              href="#contact"
               className="inline-flex items-center gap-2 glass border border-primary/40 text-foreground font-semibold px-6 py-3 clip-corner hover:border-primary hover:text-primary transition"
             >
               <MessageSquare className="h-4 w-4" /> Contact
-            </Link>
+            </a>
           </div>
+        </div>
+      </section>
+
+      {/* Gallery removed from homepage */}
+
+      {/* CONTACT (in-page) */}
+      <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="text-center mb-10">
+          <p className="text-xs uppercase tracking-[0.4em] text-primary mb-3">Get in touch</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold">Let's <span className="text-primary text-glow">Connect</span></h2>
+          <p className="mt-2 text-muted-foreground">Mentorship, partnerships, speaking opportunities — reach out directly.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            { Icon: MessageSquare, title: "WhatsApp", value: "0814368137", href: "https://wa.me/264814368137" },
+            { Icon: ArrowRight, title: "Email", value: "kangwedavid@icloud.com", href: "mailto:kangwedavid@icloud.com" },
+            { Icon: ArrowRight, title: "Instagram", value: "@imbuzi_the_trader_na", href: "#" },
+            { Icon: ArrowRight, title: "Based in", value: "Namibia · Global", href: "#" },
+          ].map(({ Icon, title, value, href }, i) => (
+            <a
+              key={i}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="glass clip-corner boxy p-6 group hover:border-primary hover:box-glow-sm transition flex items-start gap-4"
+              style={{ animationDelay: `${i * 0.05}s` }}
+            >
+              <div className="h-12 w-12 gradient-green clip-corner grid place-items-center shrink-0 box-glow-sm">
+                <Icon className="h-5 w-5 text-primary-foreground" />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">{title}</div>
+                <div className="text-base font-semibold mt-1 group-hover:text-primary transition">{value}</div>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 
@@ -110,7 +144,7 @@ function Home() {
             { k: "85%", v: "Win Rate" },
             { k: "24/7", v: "Market Watch" },
           ].map((s, i) => (
-            <div key={i} className="glass clip-corner p-5 text-center hover:box-glow-sm transition">
+            <div key={i} className="glass clip-corner boxy p-5 text-center hover:box-glow-sm transition">
               <div className="font-display text-3xl font-bold text-primary text-glow">{s.k}</div>
               <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">{s.v}</div>
             </div>
@@ -135,7 +169,7 @@ function Home() {
                 { Icon: Award, t: "Success", d: "Consistent results documented through every market cycle." },
                 { Icon: BookOpen, t: "Mentorship", d: "Sharing the blueprint with the next generation of traders." },
               ].map(({ Icon, t, d }, i) => (
-                <div key={i} className="glass clip-corner p-4 hover:border-primary/50 hover:box-glow-sm transition">
+                <div key={i} className="glass clip-corner boxy p-4 hover:border-primary/50 hover:box-glow-sm transition">
                   <Icon className="h-5 w-5 text-primary mb-2" />
                   <div className="font-semibold text-sm">{t}</div>
                   <div className="text-xs text-muted-foreground mt-1">{d}</div>
@@ -149,7 +183,7 @@ function Home() {
               <div
                 key={i}
                 className={`relative overflow-hidden clip-corner border border-primary/20 hover:border-primary group ${
-                  i === 0 ? "row-span-2 h-full" : "aspect-square"
+                  i === 0 ? "row-span-2 h-full boxy" : "aspect-square boxy"
                 }`}
               >
                 <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />

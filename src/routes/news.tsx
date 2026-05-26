@@ -33,6 +33,26 @@ function News() {
   const { data: posts, isLoading } = useQuery({
     queryKey: ["posts"],
     queryFn: async (): Promise<Post[]> => {
+      // Prefer the new `news` table (managed by the admin dashboard). Fall back to legacy `posts` table.
+      const { data: newsData, error: newsErr } = await supabase
+        .from("news")
+        .select("id, summary, images, created_at, is_published, published_at")
+        .order("created_at", { ascending: false })
+        .limit(100);
+
+      if (!newsErr && newsData && newsData.length > 0) {
+        return (newsData as any[])
+          .filter((n) => n.is_published === true || n.is_published == null)
+          .map((n) => ({
+            id: n.id,
+            caption: n.summary ?? n.content ?? "",
+            media_url: Array.isArray(n.images) && n.images.length ? n.images[0] : null,
+            media_type: (Array.isArray(n.images) && n.images.length && n.images[0].endsWith('.mp4')) ? 'video' : 'image',
+            likes_count: 0,
+            created_at: n.published_at ?? n.created_at,
+          } as Post));
+      }
+
       const { data, error } = await supabase
         .from("posts")
         .select("*")
@@ -116,9 +136,9 @@ function News() {
                   {p.media_url && (
                     <div className="relative bg-black">
                       {p.media_type === "video" ? (
-                        <video src={p.media_url} controls className="w-full max-h-[600px] object-contain" />
+                        <video src={p.media_url} controls className="w-full max-h-150 object-contain" />
                       ) : (
-                        <img src={p.media_url} alt="" loading="lazy" className="w-full max-h-[600px] object-contain" />
+                        <img src={p.media_url} alt="" loading="lazy" className="w-full max-h-150 object-contain" />
                       )}
                     </div>
                   )}

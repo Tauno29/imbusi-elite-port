@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MessageCircle, Instagram, Twitter, Send, MapPin } from "lucide-react";
+import { Mail, MessageCircle, Instagram, MapPin } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 
 export const Route = createFileRoute("/contact")({
@@ -28,11 +28,9 @@ function Contact() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { Icon: MessageCircle, title: "WhatsApp", value: "+264 00 000 0000", href: "https://wa.me/264000000000" },
-            { Icon: Mail, title: "Email", value: "david@imbuzi.fx", href: "mailto:david@imbuzi.fx" },
-            { Icon: Instagram, title: "Instagram", value: "@imbuzi.fx", href: "#" },
-            { Icon: Twitter, title: "Twitter / X", value: "@imbuzifx", href: "#" },
-            { Icon: Send, title: "Telegram", value: "@imbuzifx", href: "#" },
+            { Icon: MessageCircle, title: "WhatsApp", value: "0814368137", href: "https://wa.me/264814368137" },
+            { Icon: Mail, title: "Email", value: "kangwedavid@icloud.com", href: "mailto:kangwedavid@icloud.com" },
+            { Icon: Instagram, title: "Instagram", value: "@imbuzi_the_trader_na", href: "#" },
             { Icon: MapPin, title: "Based in", value: "Namibia · Global", href: "#" },
           ].map(({ Icon, title, value, href }, i) => (
             <a
