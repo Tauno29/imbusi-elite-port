@@ -53,7 +53,7 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-40" />
         <img src={heroBg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/60 via-background/80 to-background" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-16 sm:py-24 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 border border-primary/30 clip-corner glass text-xs uppercase tracking-[0.25em] text-primary animate-float-up">
@@ -153,7 +153,7 @@ function Home() {
                 }`}
               >
                 <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition" />
+                <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition" />
                 <div className="absolute inset-0 ring-1 ring-inset ring-primary/0 group-hover:ring-primary/60 group-hover:shadow-[inset_0_0_30px_oklch(0.82_0.27_145/0.4)] transition" />
               </div>
             ))}

@@ -50,7 +50,7 @@ export function AdminModal({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="glass border-primary/30 max-w-md">
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary to-transparent" />
         <DialogHeader>
           <div className="mx-auto h-12 w-12 gradient-green clip-corner grid place-items-center box-glow animate-pulse-glow mb-2">
             <Shield className="h-6 w-6 text-primary-foreground" />
