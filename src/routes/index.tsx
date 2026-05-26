@@ -38,6 +38,14 @@ function Home() {
   const { data: content } = useSiteContent();
   const profileImg = content?.profile_image || profileFallback;
   const aboutText = content?.about_text || "";
+  
+  // Get about images from database, fallback to static imports
+  const aboutImages = [
+    content?.about_image_1 || g1,
+    content?.about_image_2 || g2,
+    content?.about_image_3 || g3,
+    content?.about_image_4 || g4,
+  ];
 
   return (
     <SiteLayout>
@@ -137,7 +145,7 @@ function Home() {
           </div>
 
           <div className="grid grid-cols-2 gap-3">
-            {[g1, g2, g3, g4].map((src, i) => (
+            {aboutImages.map((src, i) => (
               <div
                 key={i}
                 className={`relative overflow-hidden clip-corner border border-primary/20 hover:border-primary group ${
