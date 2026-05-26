@@ -28,7 +28,7 @@ export function AdminModal({
       if (mode === "signin") {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        toast.success("Welcome back, Imbusi.");
+        toast.success("Welcome back, Imbuzi.");
       } else {
         const { error } = await supabase.auth.signUp({
           email,
@@ -59,7 +59,7 @@ export function AdminModal({
             Secure <span className="text-primary text-glow">Admin</span> Access
           </DialogTitle>
           <DialogDescription className="text-center">
-            Restricted area — Imbusi Forex Trading only.
+            Restricted area — Imbuzi Forex Trading only.
           </DialogDescription>
         </DialogHeader>
 
@@ -72,7 +72,7 @@ export function AdminModal({
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="david@imbusi.fx"
+              placeholder="david@imbuzi.fx"
               className="bg-input border-primary/20 focus-visible:ring-primary"
             />
           </div>

@@ -23,7 +23,7 @@ export function Navbar() {
               I
             </div>
             <span className="font-display font-bold tracking-tight text-sm sm:text-base">
-              IMBUSI <span className="text-primary text-glow">FX</span>
+              IMBUZI <span className="text-primary text-glow">FX</span>
             </span>
           </Link>
 

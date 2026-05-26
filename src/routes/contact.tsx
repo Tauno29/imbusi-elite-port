@@ -5,7 +5,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Imbusi Forex Trading" },
+      { title: "Contact — Imbuzi Forex Trading" },
       { name: "description", content: "Get in touch with David Kangwe Sheehama for mentorship, collaborations, and inquiries." },
     ],
   }),
@@ -29,10 +29,10 @@ function Contact() {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             { Icon: MessageCircle, title: "WhatsApp", value: "+264 00 000 0000", href: "https://wa.me/264000000000" },
-            { Icon: Mail, title: "Email", value: "david@imbusi.fx", href: "mailto:david@imbusi.fx" },
-            { Icon: Instagram, title: "Instagram", value: "@imbusi.fx", href: "#" },
-            { Icon: Twitter, title: "Twitter / X", value: "@imbusifx", href: "#" },
-            { Icon: Send, title: "Telegram", value: "@imbusifx", href: "#" },
+            { Icon: Mail, title: "Email", value: "david@imbuzi.fx", href: "mailto:david@imbuzi.fx" },
+            { Icon: Instagram, title: "Instagram", value: "@imbuzi.fx", href: "#" },
+            { Icon: Twitter, title: "Twitter / X", value: "@imbuzifx", href: "#" },
+            { Icon: Send, title: "Telegram", value: "@imbuzifx", href: "#" },
             { Icon: MapPin, title: "Based in", value: "Namibia · Global", href: "#" },
           ].map(({ Icon, title, value, href }, i) => (
             <a

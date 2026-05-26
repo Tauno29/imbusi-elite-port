@@ -35,7 +35,7 @@
 :root {
   --radius: 0.25rem;
 
-  /* Imbusi Forex palette — black, white, neon green */
+  /* Imbuzi Forex palette — black, white, neon green */
   --background: oklch(0.08 0.01 150);
   --foreground: oklch(0.98 0 0);
 

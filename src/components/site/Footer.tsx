@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 gradient-green clip-corner grid place-items-center font-display font-bold text-primary-foreground">I</div>
-            <span className="font-display font-bold">IMBUSI <span className="text-primary">FX</span></span>
+            <span className="font-display font-bold">IMBUZI <span className="text-primary">FX</span></span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
             Elite forex education and mentorship by David Kangwe Sheehama.
@@ -49,7 +49,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-primary/10 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Imbusi Forex Trading — David Kangwe Sheehama. All rights reserved.
+        © {new Date().getFullYear()} Imbuzi Forex Trading — David Kangwe Sheehama. All rights reserved.
       </div>
     </footer>
   );
