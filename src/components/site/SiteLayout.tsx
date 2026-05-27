@@ -15,7 +15,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <main className="flex-1 relative z-10">{children}</main>
       <Footer />
       <a
-        href="https://wa.me/264814368137"
+        href="https://wa.me/264814368137?text=Hi%20David%2C%20I'm%20interested%20in%20your%20forex%20mentorship."
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"

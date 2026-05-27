@@ -38,7 +38,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/264814368137"
+href="https://wa.me/264814368137?text=Hi%20David%2C%20I'm%20interested%20in%20your%20forex%20mentorship."
             target="_blank"
             rel="noreferrer"
             className="ml-3 inline-flex items-center gap-2 gradient-green text-primary-foreground font-bold uppercase tracking-wider text-xs px-4 py-2 clip-corner box-glow-sm hover:scale-105 transition"
@@ -69,7 +69,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/264814368137"
+            href="https://wa.me/264814368137?text=Hi%20David%2C%20I'm%20interested%20in%20your%20forex%20mentorship."
             target="_blank"
             rel="noreferrer"
             onClick={() => setOpen(false)}

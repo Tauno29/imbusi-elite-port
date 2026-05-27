@@ -28,7 +28,7 @@ function Contact() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { Icon: MessageCircle, title: "WhatsApp", value: "0814368137", href: "https://wa.me/264814368137" },
+            { Icon: MessageCircle, title: "WhatsApp", value: "0814368137", href: "https://wa.me/264814368137?text=Hi%20David%2C%20I'm%20interested%20in%20your%20forex%20mentorship." },
             { Icon: Mail, title: "Email", value: "kangwedavid@icloud.com", href: "mailto:kangwedavid@icloud.com" },
             { Icon: Instagram, title: "Instagram", value: "@imbuzi_the_trader_na", href: "#" },
             { Icon: MapPin, title: "Based in", value: "Namibia · Global", href: "#" },
