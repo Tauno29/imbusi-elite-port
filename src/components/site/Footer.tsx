@@ -28,7 +28,7 @@ export function Footer() {
           <h4 className="text-sm font-semibold mb-3 uppercase tracking-wider text-primary">Connect</h4>
           <div className="flex gap-3">
             {[
-              { Icon: MessageCircle, href: "https://wa.me/264814368137" },
+              { Icon: MessageCircle, href: "https://wa.me/264814368137?text=Hi%20David%2C%20I'm%20interested%20in%20your%20forex%20mentorship." },
               { Icon: Instagram, href: "#" },
             ].map(({ Icon, href }, i) => (
               <a

@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const WHATSAPP = "https://wa.me/264814368137";
+const WHATSAPP = "https://wa.me/264814368137?text=Hi%20David%2C%20I'm%20interested%20in%20your%20forex%20mentorship.";
 const INSTAGRAM = "https://instagram.com/imbuzi_the_trader_na";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
