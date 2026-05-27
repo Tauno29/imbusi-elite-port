@@ -34,7 +34,7 @@ function News() {
     queryKey: ["posts"],
     queryFn: async (): Promise<Post[]> => {
       // Prefer the new `news` table (managed by the admin dashboard). Fall back to legacy `posts` table.
-      const { data: newsData, error: newsErr } = await supabase
+      const { data: newsData, error: newsErr } = await (supabase as any)
         .from("news")
         .select("id, summary, images, created_at, is_published, published_at")
         .order("created_at", { ascending: false })
